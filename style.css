@@ -1,0 +1,249 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./images/bg-mobile.png");
+    padding: 1.5em;
+}
+
+.container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+main,
+.store-status {
+
+    border-radius: 0.6em;
+    background-color: var(--Dark-Blue);
+    /* height: 200px; */
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+
+}
+
+main {
+    border-top-right-radius: 6em;
+}
+
+.logo {
+    margin-bottom: 1.9em;
+}
+
+.store-option {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: 50px;
+    gap: 1em;
+}
+
+
+.store-option .image-container {
+    background-color: var(--Very-Dark-Blue);
+    padding: 15px 10px;
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.use-info {
+    color: var(--Grayish-Blue);
+    font-size: 0.9rem;
+    text-align: center;
+
+}
+
+
+.use-info span {
+    font-weight: 900;
+    color: var(--Pale-Blue)
+}
+
+.store-status {
+    padding: 2em;
+    padding-bottom: 3em;
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+.store-status .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    width: 100%;
+}
+
+.space-bar .bg {
+    width: 100%;
+    height: 1.4em;
+    background-color: var(--Very-Dark-Blue);
+    opacity: 70%;
+    border-radius: 15px;
+    position: relative;
+}
+
+.fill-bar {
+    width: 80%;
+    height: 69%;
+    position: absolute;
+    top: 50%;
+    left: 1.5%;
+    transform: translatey(-50%);
+    border-radius: 15px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%))
+}
+
+.white-circle {
+    border-radius: 50%;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.gb-quantity {
+    display: flex;
+    justify-content: space-between;
+    color: var(--Pale-Blue);
+    font-size: 0.8rem;
+    font-weight: 900;
+
+}
+
+.gb-left {
+    background-color: var(--Pale-Blue);
+    width: 180px;
+    height: 75px;
+    border-radius: 0.5em;
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    transform: translate(50%, 50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0.5em
+}
+
+.left-over {
+    color: var(--Very-Dark-Blue);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    font-weight: 900;
+}
+
+.number {
+    font-size: 2.5em;
+    color: var(--Very-Dark-Blue);
+    font-weight: 900;
+    justify-self: flex-end;
+}
+
+@media (min-width: 1000px) {
+    body {
+        background-image: url("./images/bg-desktop.png");
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: var(--Very-Dark-Blue);
+    }
+
+    main {
+        padding: 2em;
+        padding-right: 7em;
+    }
+
+    .container {
+        flex-direction: row;
+        align-items: flex-end;
+        width: 65%;
+        gap: 2em;
+        margin-bottom: 4em;
+
+    }
+
+    .store-status {
+        width: 100%;
+        height: 80%;
+
+    }
+
+    .use-info {
+        color: var(--Grayish-Blue);
+        font-size: 0.9rem;
+        text-align: left;
+
+    }
+
+    .fill-bar {
+        left: 1%;
+    }
+
+    .gb-left {
+        position: absolute;
+        width: 150px;
+        height: 55px;
+        padding:1em;
+        top: 0px;
+        right:50px;
+        transform: translateY(-50%);
+        padding: 0em;
+
+    }
+
+    .number {
+        font-size: 
+        2em;
+    }
+
+    .left-over {
+        font-size: 0.75em;
+    }
+
+    .triangle {
+
+        width: 0px;
+        height: 0px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+       position: absolute;
+       right: 40px;
+       top:18px;
+
+        border-top: 20px solid var(--Pale-Blue);
+        transform: rotate(90deg);
+
+    }
+}
